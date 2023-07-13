@@ -1,0 +1,2 @@
+sum by(instance, vhost, queue)(rabbitmq_detailed_queue_consumers{ vhost=~"$vhost", namespace="$namespace", queue=~"$queue" })
+  * on(instance) group_left(rabbitmq_cluster, rabbitmq_node) rabbitmq_identity_info{ rabbitmq_cluster = ~"$rabbitmq_cluster", namespace = "$namespace" }
