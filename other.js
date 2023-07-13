@@ -1,0 +1,1 @@
+rabbitmq_queue_messages{ vhost = "<VHOST_NAME>", queue = "<QUEUE_NAME>" }
